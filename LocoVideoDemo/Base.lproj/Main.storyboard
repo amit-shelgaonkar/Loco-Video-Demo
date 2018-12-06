@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocoVideoDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5B0-iA-hwF" customClass="VideoplayerView" customModule="LocoVideoDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-qO-E8F">
+                                <rect key="frame" x="20" y="112" width="335" height="369"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.1333333333" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="369" id="WPR-uk-Ab4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbu-67-qHK">
+                                <rect key="frame" x="128" y="52" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.1333333333" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Kez-xu-2n3"/>
+                                    <constraint firstAttribute="height" constant="120" id="dPn-D0-9sn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gbu-67-qHK" firstAttribute="centerY" secondItem="2Hr-qO-E8F" secondAttribute="top" id="0F7-kW-8g6"/>
+                            <constraint firstItem="gbu-67-qHK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1FS-lc-mTi"/>
+                            <constraint firstItem="2Hr-qO-E8F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WYW-eb-jzZ"/>
+                            <constraint firstItem="2Hr-qO-E8F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="XKR-Qm-h4I"/>
+                            <constraint firstItem="2Hr-qO-E8F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Z2U-Pw-f7S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Hr-qO-E8F" secondAttribute="trailing" constant="20" id="qDA-Kp-9ta"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="circularBackgroundView" destination="gbu-67-qHK" id="Khz-ZZ-wat"/>
+                        <outlet property="playerView" destination="5B0-iA-hwF" id="EuQ-CT-nH4"/>
+                        <outlet property="questionsCardView" destination="2Hr-qO-E8F" id="iIe-Zd-jTp"/>
+                        <outlet property="questionscardHeightConstraint" destination="WPR-uk-Ab4" id="s9f-yO-dDj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
